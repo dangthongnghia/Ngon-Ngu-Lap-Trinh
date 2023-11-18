@@ -1,1 +1,2 @@
-# Ng-n-Ng-L-p-Tr-nh
+# NgonNguLapTrinh
+Đặng Thông Nghĩa
