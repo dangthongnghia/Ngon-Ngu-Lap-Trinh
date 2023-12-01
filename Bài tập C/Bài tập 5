@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int month, day;
+    
+    scanf("%d %d", &month, &day);
+
+    switch (month) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            printf("Tháng %d có 31 ngày.", month);
+            break;
+        case 4: case 6: case 9: case 11:
+            printf("Tháng %d có 30 ngày.", month);
+            break;
+        case 2:
+            if (day >= 1 && day <= 28) {
+                printf("Tháng 2 có 28 hoặc 29 ngày.");
+            } else {
+                printf("Ngày không hợp lệ cho tháng 2.");
+            }
+            break;
+        default:
+            printf("Tháng không hợp lệ.");
+    }
+
+    return 0;
+}
