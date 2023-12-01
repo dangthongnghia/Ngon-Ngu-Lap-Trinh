@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    scanf("%d", &num);
+
+    if (num > 0) {
+        printf("%d là số dương.\n", num);
+    } else if (num < 0) {
+        printf("%d là số âm.\n", num);
+    } else {
+        printf("%d bằng không.\n", num);
+    }
+
+    return 0;
+}
