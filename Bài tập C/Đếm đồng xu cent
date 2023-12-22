@@ -14,7 +14,7 @@ int main() {
     
     while (N > 0) {
     if (N >= 25) {
-        A++; //A từ 0 - 1 thì trừ cho 25
+        dem25++; 
         N-=25;
         
     } else if (N >= 10) {
