@@ -1,3 +1,4 @@
+// Bài tập về đổi đồng xu bằng mảng một chiều
 
 #include <stdio.h>
 
