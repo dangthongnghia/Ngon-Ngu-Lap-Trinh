@@ -1,0 +1,57 @@
+#include <stdio.h>
+#define MAX 100 // giới hạn số phần tử tối đa của mảng
+
+// hàm nhập mảng từ bàn phím
+void NhapMang(int a[], int n) {
+    for (int i = 0; i < n; i++) {
+        printf("Nhap a[%d]: ", i);
+        scanf("%d", &a[i]);
+    }
+}
+
+// hàm hiển thị các số dương trong mảng
+void HienThiSoDuong(int a[], int n) {
+    printf("Cac so duong trong mang la: ");
+    for (int i = 0; i < n; i++) {
+        if (a[i] > 0) {
+            printf("%d ", a[i]);
+        }
+    }
+    printf("\n");
+}
+
+// hàm hiển thị các số chẵn trong mảng
+void HienThiSoChan(int a[], int n) {
+    printf("Cac so chan trong mang la: ");
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 == 0) {
+            printf("%d ", a[i]);
+        }
+    }
+    printf("\n");
+}
+
+// hàm hiển thị các số lẻ trong mảng
+void HienThiSoLe(int a[], int n) {
+    printf("Cac so le trong mang la: ");
+    for (int i = 0; i < n; i++) {
+        if (a[i] % 2 != 0) {
+            printf("%d ", a[i]);
+        }
+    }
+    printf("\n");
+}
+
+int main() {
+    int a[MAX]; // khai báo mảng số nguyên
+    int n; // khai báo số phần tử của mảng
+    do {
+        printf("Nhap so phan tu cua mang (0 < n <= %d): ", MAX);
+        scanf("%d", &n);
+    } while (n <= 0 || n > MAX); // kiểm tra điều kiện nhập
+    NhapMang(a, n); // gọi hàm nhập mảng
+    HienThiSoDuong(a, n); // gọi hàm hiển thị số dương
+    HienThiSoChan(a, n); // gọi hàm hiển thị số chẵn
+    HienThiSoLe(a, n); // gọi hàm hiển thị số lẻ
+    return 0;
+}
